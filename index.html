@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird Game</title>
+    <link rel="icon" href="bird.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Flappy Bird</h1>
+        
+        <div class="controls">
+            <div class="difficulty-selector">
+                <label for="difficulty">Difficulty:</label>
+                <select id="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+            
+            <button id="startButton" class="btn btn-green">Start Game</button>
+            <button id="restartButton" class="btn btn-blue hidden">Play Again</button>
+        </div>
+        
+        <div class="score-container">
+            <div class="score-card">
+                <div class="score-label">Score</div>
+                <div id="currentScore" class="score-value">0</div>
+            </div>
+            <div class="score-card">
+                <div class="score-label">Best</div>
+                <div id="highScore" class="score-value">0</div>
+            </div>
+        </div>
+        
+        <div class="canvas-container">
+            <canvas id="gameCanvas"></canvas>
+            
+            <div id="startScreen" class="overlay">
+                <h2>Ready to Play?</h2>
+                <p>Click, tap, or press space to flap your wings!</p>
+                <button class="btn btn-green">Start Game</button>
+            </div>
+            
+            <div id="gameOverScreen" class="overlay hidden">
+                <h2>Game Over!</h2>
+                <p id="finalScore">Score: 0</p>
+                <p id="finalHighScore">High Score: 0</p>
+                <button class="btn btn-blue">Play Again</button>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <p>Click, tap, or press space to flap your wings and avoid the pipes!</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
